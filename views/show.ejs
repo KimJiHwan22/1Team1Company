@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>게시글 상세보기</h1><br>
+    <% for(let post of des) { %>
+        제목 :      <%= post.title %> <br>
+        작성자 :    <%= post.writer %> <br>
+        내용 :      <%= post.contents %> <br>
+        작성일 :    <%= post.createdAt %> <br>
+        수정일 :    <%= post.updateAt %> <br>
+
+        <button ><a href="/index/update/<%=post.id%>">수정하기</a></button></td>
+        
+        <form action="/api/delete/<%=post.id%>" method="post">
+            <td><input type="submit" value="삭제하기"></input></td><br>
+        </form>
+    <h1>댓글</h1>
+        <% if(rep) {%>
+            <% for(let reply of rep) {%>
+            
+            작성자: <%= reply.writer %>
+            내용:   <%= reply.contents %>
+            <br>
+            <script>console.log('댓글 달아짐');</script>
+
+            <% } %>
+        <% } %>
+
+        <form action="/api/reply/<%= post.id %>" method="post">
+            <input type="text" name="writer" placeholder="작성자"><br>
+            <input type="text" name="contents" placeholder="내용"><br>
+            <input type="submit" value="댓글 등록">
+        </form>
+
+    <% } %>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원정보</h1><br>
+        <% for(let post of des { %>
+            아이디: <%= post.userId %> <br>
+            비밀번호: <%= post.userPw %> <br>
+            이름: <%= post.userName %> <br>
+        <% } %>
+    
+    <a href="/api/show/1">게시판으로 돌아가기</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>게시글 업데이트</h1><br>
+    <form action="/api/update/<%= id %>" method="post">
+        <input type="text" name="new_title" placeholder="new_title">
+        <input type="textarea" name="new_contents" placeholder="new_contents">
+        <input type="submit">
+    </form>
+</body>
+</html>

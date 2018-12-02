@@ -5,15 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+        <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/css/agency.min.css" rel="stylesheet">
 </head>
 <body>
+
+
+
+
+    <div class="container center_div">    
     <h1>게시글 상세보기</h1><br>
     <% for(let post of des) { %>
         제목 :      <%= post.title %> <br>
         작성자 :    <%= post.writer %> <br>
         내용 :      <%= post.contents %> <br>
         작성일 :    <%= post.createdAt %> <br>
-        수정일 :    <%= post.updateAt %> <br>
 
         <button ><a href="/index/update/<%=post.id%>">수정하기</a></button></td>
         
@@ -33,7 +49,6 @@
         <% } %>
 
         <form action="/api/reply/<%= post.id %>" method="post">
-            <input type="text" name="writer" placeholder="작성자"><br>
             <input type="text" name="contents" placeholder="내용"><br>
             <input type="submit" value="댓글 등록">
         </form>
@@ -42,5 +57,23 @@
 
     
     
+    </div>
+
+
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Contact form JavaScript -->
+<script src="/javascripts/jqBootstrapValidation.js"></script>
+<script src="/javascripts/contact_me.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="/javascripts/agency.min.js"></script>
 </body>
 </html>

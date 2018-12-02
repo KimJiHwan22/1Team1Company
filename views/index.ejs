@@ -64,10 +64,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#BBS">게시판</a>
+              <a class="nav-link js-scroll-trigger" href="/api/show/1">게시판</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">포트폴리오</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/api/showMenu">급식</a>
             </li>
             <!-- About
             <li class="nav-item">
@@ -98,49 +101,7 @@
       </div>
     </header>
 
-    <!-- 게시판 -->
-    <section class="bg-light" id="BBS">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">게시판</h2>
-          <h3 class="section-subheading text-muted"></h3>
-        </div>
-      </div>
-    <table  class="table table-hover">
-      <thead>
-        <tr>
-          <th>번호</th>
-          <th>제목</th>
-          <th>작성자</th>
-          <th>작성 일</th>
-          <th>수정 일</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% for(let post of des) {%>
-        <tr>
-          <td><%= post.id %></td>
-          <td><a href="/api/tkd/<%= post.id %>"><%= post.title %></a></td></a>
-          <td><%= post.writer %></td>
-          <td><%= post.createdAt %></td>
-          <td><%= post.updatedAt %></td>
-        </tr>
-        <% } %>
-      </tbody>
-    </table>
-        <div class="text-center">
-          <ul class="pagination">
-                <li><a  href="/api/show/1">1</a></li>
-                <li><a  href="/api/show/2">2</a></li>
-                <li><a  href="/api/show/3">3</a></li>
-          </ul>
-          <a href="/index/insert" class="btn btn-primary btn pull-right">글 작성</a>
-        </div>
-    </div>
-    </section>
-
-      <a href="/index/userInsert" class="btn btn-primary btn pull-right">회원가입</a><br>
+      <a href="/index/userInsert" class="btn btn-primary btn pull-right">회원가입</a>
       <a href="/index/userLogin" class="btn btn-primary btn pull-right">로그인</a>
     <!-- Services
     <section id="services">

@@ -13,6 +13,10 @@ const bbs = {
   contents: {
     type: Sequelize.STRING,
     allowNull: false
+  },
+  createdAt: {
+    type: Sequelize.UUID,
+    allowNull: false
   }
 };
 

@@ -8,7 +8,8 @@ import session from 'express-session';
 // import favicon from 'serve-favicon';
 import './database/connection';
 import indexRouter from './routes/index';
-import apiRouter from './routes/controller';
+import bbsRouter from './routes/bbsController';
+import userRouter from './routes/userController';
 
 const app = express();
 const debug = Debug('bbs:app');
@@ -35,7 +36,11 @@ app.use(session({
 }));
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/api', apiRouter);
+app.get('/', (req, res) => {
+  res.redirect('/index/main');
+});
+app.use('/users', userRouter);
+app.use('/api', bbsRouter);
 app.use('/index', indexRouter);
 
 // catch 404 and forward to error handler

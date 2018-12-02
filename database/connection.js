@@ -26,6 +26,6 @@ const Reply = sequelize.define('reply', model.reply);
 Bbs.hasMany(Reply, { foreignKey: 'postId' });
 Reply.belongsTo(Bbs, { foreignKey: 'postId' });
 
-sequelize.sync(/*{force:true} */);
+sequelize.sync(/* {force:true} */);
 
 export default sequelize;

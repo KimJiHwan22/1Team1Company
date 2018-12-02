@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/css/agency.min.css" rel="stylesheet">
+
+
+
+
+    <style type="text/css">
+    .pagination {
+        display: inline-flex
+    }
+
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    .abc{
+      color: skyblue;
+    }
+    .team-member{
+        text-align: center;
+    }
+    </style>
+
+  </head>
+
+  <body id="page-top">
+    <!-- 게시판 -->
+    <section class="bg-light" id="BBS">
+    <div class="container">
+    <table  class="table table-sm table-responsive">
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>제목</th>
+          <th>작성자</th>
+          <th>작성 일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let post of des) {%>
+        <tr>
+          <td><%= post.id %></td>
+          <td><a href="/api/tkd/<%= post.id %>"><%= post.title %></a></td></a>
+          <td><%= post.writer %></td>
+          <td><%= post.createdAt %></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+
+      <div>
+        <form action="/api/s" method="get">
+          <input type="text" name="searchWord"/>
+          <input type="submit" value="제목"/>
+        </form>
+      </div>
+
+        <div class="text-center">
+          <ul class="pagination">
+                <li><a href="/api/show/1">1</a></li>
+                <li><a href="/api/show/2">2</a></li>
+                <li><a href="/api/show/3">3</a></li>
+          </ul>
+          <br />
+          <a href="/index/insert" class="btn btn-primary btn pull-right">글 작성</a> 
+        </div>
+        
+      <a href="/index/userInsert" class="btn btn-primary btn pull-left">회원가입</a> 
+      <a href="/index/userLogin" class="btn btn-primary btn pull-left">로그인</a>
+    </div>
+    </section>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="/javascripts/jqBootstrapValidation.js"></script>
+    <script src="/javascripts/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/javascripts/agency.min.js"></script>
+
+  </body>
+
+</html>

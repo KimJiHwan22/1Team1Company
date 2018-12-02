@@ -8,6 +8,7 @@ import updateRouter from './bbsMiddleWares/updatePost/update';
 import deleteRouter from './bbsMiddleWares/deletePost/delete';
 import replyRouter from './bbsMiddleWares/makeReply/reply';
 import schoolRouter from './bbsMiddleWares/showMenu/lunch';
+import searchRouter from './bbsMiddleWares/searchPost/search';
 
 const api = express();
 
@@ -31,5 +32,8 @@ api.use('/', replyRouter);
 
 // 급식 라우터
 api.use('/', schoolRouter);
+
+// 게시글 찾는 라우터
+api.use('/', searchRouter);
 
 export default api;

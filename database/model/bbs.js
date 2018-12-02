@@ -11,11 +11,15 @@ const bbs = {
     allowNull: false
   },
   contents: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false
   },
+  images: {
+    type: Sequelize.BLOB,
+    allowNull: true
+  },
   createdAt: {
-    type: Sequelize.UUID,
+    type: Sequelize.DATEONLY,
     allowNull: false
   }
 };

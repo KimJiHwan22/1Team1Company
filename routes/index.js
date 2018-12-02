@@ -1,6 +1,8 @@
 import alert from 'alert-node';
 import express from 'express';
 import sequelize from '../database/connection';
+import gcm from 'node-gcm';
+let message = new gcm.Message();
 
 const router = express.Router();
 
@@ -9,7 +11,10 @@ router.get('/insert', (req, res) => {
   if (!req.session.userId) {
     console.log('로그인이 되지않은 사용자입니다.');
     res.redirect('/api/show/1');
-    alert('로그인 해주십시오.');
+    message.addNotification({
+      title: 'Alert!!!',
+      body: 'Abnormal data access'
+    });
   }
   res.render('insert.ejs');
 });

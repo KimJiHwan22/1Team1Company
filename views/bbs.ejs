@@ -30,19 +30,15 @@
         display: inline-flex
     }
 
+    html, body, section {
+      height: 100%;
+    }
+
     .pagination a {
         color: black;
         float: left;
         padding: 8px 16px;
         text-decoration: none;
-    }
-
-    .abc{
-      color: skyblue;
-    }
-    .team-member{
-        text-align: center;
-
     }
     </style>
   </head>
@@ -51,7 +47,7 @@
     <!-- 게시판 -->
     <section class="bg-light" id="BBS">
     <div class="container">
-    <table  class="table table-hover">
+    <table  class="table table-sm">
       <thead>
         <tr>
           <th>번호</th>
@@ -71,17 +67,26 @@
         <% } %>
       </tbody>
     </table>
+
+      <div>
+        <form action="/api/s" method="get">
+          <input type="text" name="searchWord"/>
+          <input type="submit"/>
+        </form>
+      </div>
+
         <div class="text-center">
           <ul class="pagination">
-           <% for(let u = 1; u < des.length; u++) { %>
-                <li><a  href="/api/show/<%= u %>"><%= u %></a></li>
-            <% } %>
+                <li><a href="/api/show/1">1</a></li>
+                <li><a href="/api/show/2">2</a></li>
+                <li><a href="/api/show/3">3</a></li>
           </ul>
+          <br />
           <a href="/index/insert" class="btn btn-primary btn pull-right">글 작성</a>
         </div>
         
-      <a href="/index/userInsert" class="btn btn-primary btn pull-right">회원가입</a>
-      <a href="/index/userLogin" class="btn btn-primary btn pull-right">로그인</a>
+      <a href="/index/userInsert" class="btn btn-primary btn pull-left">회원가입</a>
+      <a href="/index/userLogin" class="btn btn-primary btn pull-left">로그인</a>
     </div>
     </section>
 

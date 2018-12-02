@@ -2,7 +2,7 @@ import Sequelize from 'sequelize';
 
 import model from './model';
 
-const sequelize = new Sequelize('node_bbs', 'root', 'root', {
+const sequelize = new Sequelize('node_bbs', 'root', 'cjdfhrql', {
   host: '127.0.0.1',
   port: '3306',
   dialect: 'mysql'
@@ -26,6 +26,6 @@ const Reply = sequelize.define('reply', model.reply);
 Bbs.hasMany(Reply, { foreignKey: 'postId' });
 Reply.belongsTo(Bbs, { foreignKey: 'postId' });
 
-sequelize.sync(/* {force:true} */);
+sequelize.sync( {force:false} );
 
 export default sequelize;

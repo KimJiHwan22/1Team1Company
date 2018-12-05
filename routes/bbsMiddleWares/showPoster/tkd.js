@@ -16,8 +16,6 @@ api.get('/tkd/:id', (req, res) => {
         where: { postId: req.params.id }
       })
         .then((result2) => {
-          console.log(result2, 'dsa', re);
-
           res.render('show.ejs', {
             des: re, rep: result2
           });

@@ -20,19 +20,16 @@
 </head>
 <body>
 
-
-
-
     <div class="container center_div">    
         <h1>게시글 업데이트</h1><br>
         <form action="/api/update/<%= id %>" method="post">
-            <input type="text" name="new_title" placeholder="new_title">
-            <input type="textarea" name="new_contents" placeholder="new_contents">
-            <input type="submit">
+            <input type="text" class="form-control" name="new_title" placeholder="new_title"><br />
+              <div class="form-group">
+                <textarea name="new_contents" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="new_contents"></textarea>
+              </div>
+            <input type="submit" value="작성">
         </form>
     </div>
-
-
 
 
 <!-- Bootstrap core JavaScript -->

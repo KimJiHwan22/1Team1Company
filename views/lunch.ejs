@@ -18,23 +18,30 @@
     <!-- Custom styles for this template -->
     <link href="/stylesheets/css/agency.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="text-center" >
 <style type="text/css">
 h1, h2, h3, h4, h5, h6 {
       text-align: center;
 }
 </style>
 
-
+  <section>
     <div class="container center_div">
-      <% if(menu[4] === '') {%>
-        오늘은 급식 없음
+      <% if(menu.today === '') {%>
+        <h1>오늘은 급식 없음</h1>
       <% } else { %>
-        <h1>오늘의 급식</h1>
-        <%= menu[4] %>
+      <table class="table">
+        <thead>
+          <tr><th><h1>오늘의 급식</h1></th></tr>
+        </thead>
+        <tbody>
+          <tr><th><pre><%= menu.today %></pre></th></tr>
+        </tbody>
+      </table>
       <% } %>
     </div>
-    <button><a href="/index/main">메인으로</a></button>
+    <button class="btn btn-lg"><a href="/index/main">메인으로</a></button>
+  </section>
 
 
 

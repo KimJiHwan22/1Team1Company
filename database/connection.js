@@ -19,12 +19,12 @@ sequelize.authenticate()
     }
   });
 
-const Bbs = sequelize.define('bbs', model.bbs);
-const User = sequelize.define('user', model.user);
-const Reply = sequelize.define('reply', model.reply);
+sequelize.define('bbs', model.bbs);
+sequelize.define('user', model.user);
+sequelize.define('reply', model.reply);
 
-Bbs.hasMany(Reply, { foreignKey: 'postId' });
-Reply.belongsTo(Bbs, { foreignKey: 'postId' });
+// Bbs.hasMany(Reply, { foreignKey: 'postId' });
+// Reply.belongsTo(Bbs, { foreignKey: 'postId' });
 
 sequelize.sync( {force:false} );
 

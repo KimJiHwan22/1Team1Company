@@ -26,9 +26,11 @@
     <div class="container center_div">    
         <h1>게시글 작성</h1><br>
         <form action="/api/insert" method="POST">
-            <input type="text" name="title" placeholder="title">
-            <input type="textarea" name="contents" placeholder="contents">
-            <input type="submit">
+            <input type="text" class="form-control" name="title" placeholder="Title"><br />
+              <div class="form-group">
+                <textarea name="contents" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Contents"></textarea>
+              </div>
+            <input type="submit" value="작성">
         </form>
     </div>
 

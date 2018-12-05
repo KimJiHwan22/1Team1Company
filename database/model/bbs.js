@@ -14,10 +14,6 @@ const bbs = {
     type: Sequelize.TEXT,
     allowNull: false
   },
-  images: {
-    type: Sequelize.BLOB,
-    allowNull: true
-  },
   createdAt: {
     type: Sequelize.DATEONLY,
     allowNull: false

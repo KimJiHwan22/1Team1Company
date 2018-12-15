@@ -8,7 +8,7 @@
     "test": "mocha --recursive './test/*Test.js' --compilers js:babel-core/register"
   },
   "dependencies": {
-    "alert-node": "^1.2.2",
+    "alert-node": "^1.2.3",
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
@@ -22,13 +22,13 @@
     "express": "^4.15.4",
     "express-session": "^1.15.6",
     "js-alert": "^1.0.4",
-    "morgan": "^1.8.2",
-    "mysql2": "^1.5.3",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.6.4",
     "node-gcm": "^1.0.2",
     "node-school-kr": "^1.0.1",
     "popups": "^1.1.3",
     "register": "0.0.0",
-    "sequelize": "^4.37.10",
+    "sequelize": "^4.41.2",
     "serve-favicon": "^2.4.3",
     "session": "^0.1.0"
   },

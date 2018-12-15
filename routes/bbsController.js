@@ -9,6 +9,7 @@ import deleteRouter from './bbsMiddleWares/deletePost/delete';
 import replyRouter from './bbsMiddleWares/makeReply/reply';
 import schoolRouter from './bbsMiddleWares/showMenu/lunch';
 import searchRouter from './bbsMiddleWares/searchPost/search';
+import calenderRouter from './bbsMiddleWares/calender/calender';
 
 const api = express();
 
@@ -35,5 +36,9 @@ api.use('/', schoolRouter);
 
 // 게시글 찾는 라우터
 api.use('/', searchRouter);
+
+// 학사일정 라우터
+api.use('/', calenderRouter);
+
 
 export default api;

@@ -8,7 +8,7 @@ const school = new School();
 
 school.init(school.eduType.high, school.region.seoul, 'B100000662');
 /* GET index page. */
-api.get('/showMenu', (req, res) => {
+api.get('/schoolMenu', (req, res) => {
   const men = () => {
     school.getMeal().then((result) => {
       console.log(result.today);

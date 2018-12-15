@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+        <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/css/agency.min.css" rel="stylesheet">
+</head>
+<body class="text-center" >
+<style type="text/css">
+h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+}
+</style>
+
+    <div class="container center_div">
+        <table class="table">
+                <h1><%= result.month %>월의 학사 일정</h1>
+            <tbody>
+            <tr>
+                <% let a = 1;%>
+                <% for(let i = 1; i<=18; i++ ) {%>
+                
+                <% if(result[i] === '') { %>
+                    <% continue; %>
+                <% } else { %>
+                <td>
+                    <%= i %> <%= result[i] %>
+                <% } %>
+                </td>
+                <% } %>
+            </tr>
+            <tr>
+            <% for(let i = 19; i<=31; i++ ) {%>
+                
+                <% if(result[i] === '') { %>
+                    <% continue; %>
+                <% } else { %>
+                <td>
+                    <%= i %> <%= result[i] %>
+                <% } %>
+                </td>
+                <% } %>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <button class="btn btn-lg"><a href="/index/main">메인으로</a></button>
+
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Contact form JavaScript -->
+<script src="/javascripts/jqBootstrapValidation.js"></script>
+<script src="/javascripts/contact_me.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="/javascripts/agency.min.js"></script>
+</body>
+</html>
+

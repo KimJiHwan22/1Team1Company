@@ -1,8 +1,6 @@
 import alert from 'alert-node';
 import express from 'express';
 import sequelize from '../database/connection';
-import gcm from 'node-gcm';
-let message = new gcm.Message();
 
 const router = express.Router();
 

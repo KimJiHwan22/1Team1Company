@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+CTYPE html>
 <html lang="ko">
 
   <head>
@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ygm blog</title>
+    <title>hanseiApp!</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,12 +51,12 @@
 
   </head>
 
-  <body id="page-top">
+  <body id="page-top" style="overflow-y:hidden;">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a  class="navbar-brand js-scroll-trigger" href="#page-top">ygm blog</a>
+        <a  class="navbar-brand js-scroll-trigger" href="#page-top">hanseiApp!</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" class="abc" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -70,7 +70,7 @@
               <a class="nav-link js-scroll-trigger" href="#portfolio">포트폴리오</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/api/showMenu">급식</a>
+              <a class="nav-link js-scroll-trigger" href="/api/schoolMenu">급식</a>
             </li>
             <!-- About
             <li class="nav-item">
@@ -92,7 +92,6 @@
     <header class="masthead">
       <div class="container">
         <div class="intro-text">
-          <div class="intro-lead-in">Welcome to my blog</div>
           <div class="intro-heading text-uppercase">만나서 반갑습니다.</div>
           <!--
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
@@ -101,8 +100,6 @@
       </div>
     </header>
 
-      <a href="/index/userInsert" class="btn btn-primary btn pull-right">회원가입</a>
-      <a href="/index/userLogin" class="btn btn-primary btn pull-right">로그인</a>
     <!-- Services
     <section id="services">
       <div class="container">
@@ -334,14 +331,13 @@
     <section class="bg-light team" id="team">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">자기소개</h2>
-          </div>
         </div>
-            <div class="team-member">
-              <img class="mx-auto rounded" src="/images/img/team/1.jpg" alt="">
-              <h4>양경민</h4>
-              <p class="text-muted">고등학생</p>
+            <div class="team-member centered ">
+                  <div>
+                    <a href="/index/userInsert" class="btn btn-primary btn">회원가입</a>
+                    <a href="/index/userLogin" class="btn btn-primary btn">로그인</a>
+                    <a href="/index/logout" class="btn btn-primary btn">로그아웃</a>
+                  </div>
               <!--<ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -664,3 +660,5 @@
   </body>
 
 </html>
+
+
